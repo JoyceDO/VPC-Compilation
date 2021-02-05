@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graph View Demo</title>
+
+    <style>
+        #central_area {
+            display: flex;
+        }
+        #text_button {
+            float: left;
+        }
+        #central_area, #graph_area {
+            margin-left: 5px;
+        }
+        #graph_view {
+            margin-top: 5px;
+        }
+        #text_frame_title {
+            margin-bottom: 9px;
+        }
+        #text_edit_box {
+            width: 230px;
+            height: 195px;
+        }
+        #btn_add_node:focus, #btn_add_edge:focus, #btn_delete:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="container">
+    <div id="header">
+        <p>{{header_content}}</p>
+    </div>
+    <div id="main_area">
+        <div id="central_area">
+            <div id="text_area">
+                <div id="text_frame">
+                    <div id="text_frame_title">
+                        <label>Network.txt</label>
+                    </div>
+                    <label>
+                        <textarea id="text_edit_box"></textarea>
+                    </label>
+                </div>
+                <div id="text_button">
+                    <button id="btn_render">Render</button>
+                </div>
+            </div>
+            <div id="graph_area">
+                <div id="control_bar">
+                    <button id="btn_add_node">Add Node</button>
+                    <button id="btn_add_edge">Add Edge</button>
+                    <button id="btn_delete">Delete</button>
+                </div>
+                <div id="graph_view"></div>
+                <button id="btn_translate">Translate</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/libs/url.js"></script>
+<script src="../static/libs/jquery.js"></script>
+<script src="../static/libs/two.js"></script>
+<script src="../static/js/graphwindow.js"></script>
+
+</body>
+
+</html>
